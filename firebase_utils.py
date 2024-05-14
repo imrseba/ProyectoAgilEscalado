@@ -4,7 +4,7 @@ from firebase_admin import credentials, db
 def initialize_firebase():
     if not firebase_admin._apps:
         # Ruta al archivo JSON de credenciales de servicio
-        firebase_sdk = credentials.Certificate('path/to/proyectoagilescalado-firebase-adminsdk-7rd33-f5e91e8997.json')
+        firebase_sdk = credentials.Certificate('proyectoagilescalado-firebase-adminsdk-7rd33-f5e91e8997.json')
 
         # Inicializar la aplicación Firebase solo si no está inicializada
         firebase_admin.initialize_app(firebase_sdk, {'databaseURL': 'https://proyectoagilescalado-default-rtdb.firebaseio.com/'})
