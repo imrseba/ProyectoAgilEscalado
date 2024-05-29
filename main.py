@@ -14,8 +14,6 @@ def main():
     st.header("Crear Nuevo Reporte de Avance de Grupo")
     crear_avanze_grupo()
 
-   
-
 if __name__ == "__main__":
     main()
 

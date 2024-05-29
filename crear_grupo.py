@@ -6,7 +6,7 @@ def crear_grupo():
         # Campos de entrada dentro del formulario
         nombre_grupo = st.text_input("Nombre del Grupo:")
         descripcion_grupo = st.text_area("Descripción del Grupo:")
-        miembros_grupo = st.text_area("Miembros del Grupo:")
+        miembros_grupo = st.text_area("Lider del Grupo:")
         correo_grupo = st.text_area("Correo del Grupo:")
         # Botón para enviar el formulario (crear grupo)
         submit_button = st.form_submit_button("crear Grupo")
