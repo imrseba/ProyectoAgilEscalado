@@ -71,3 +71,13 @@ def actualizar_sprint(grupo_id, sprint_id):
     ref_sprint.update({
         'cumplido': True
     })
+
+
+def obtener_grupo_id(nombreGrupo):
+    ref_grupos = db.reference('Grupos')
+    grupos = ref_grupos.get()
+    if grupos:
+        for grupo_id, grupo_info in grupos.items():
+            if grupo_info.get('nombreGrupo') == nombreGrupo:
+                return grupo_id
+    return None
