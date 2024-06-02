@@ -2,6 +2,7 @@ from EmailSender import EmailSender
 import streamlit as st
 from firebase_utils import obtener_grupos, actualizar_hito_grupo, obtener_hitos_grupo, obtener_hitos_sprint, actualizar_sprint
 from generarPDF import generar_pdf
+from mostrar_hitos import mostrar_hitos_app
 
 email_sender = EmailSender(smtp_server='smtp.gmail.com',
                            smtp_port=587,
@@ -62,5 +63,7 @@ def crear_avanze_grupo():
                         attachment_name=f"Avance_{selected_grupo}.pdf"
                     )
                     st.success(f"¡Avance del Grupo '{selected_grupo}' creado correctamente!")
+        
+        mostrar_hitos_app(grupo_id, grupo_id_sprint,selected_sprint)
 
 
