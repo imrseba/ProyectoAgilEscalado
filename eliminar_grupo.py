@@ -24,3 +24,4 @@ def eliminar_grupo_app():
             eliminar_grupo(grupo_id)
             st.sidebar.success("¡Grupo eliminado exitosamente!")
             st.experimental_rerun()
+
