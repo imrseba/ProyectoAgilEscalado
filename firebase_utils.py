@@ -81,3 +81,7 @@ def obtener_grupo_id(nombreGrupo):
             if grupo_info.get('nombreGrupo') == nombreGrupo:
                 return grupo_id
     return None
+
+def eliminar_grupo(grupo_id):
+    ref_grupo = db.reference(f'Grupos/{grupo_id}')
+    ref_grupo.delete()

@@ -63,7 +63,17 @@ def crear_avanze_grupo():
                         attachment_name=f"Avance_{selected_grupo}.pdf"
                     )
                     st.success(f"¡Avance del Grupo '{selected_grupo}' creado correctamente!")
-        
+                else:
+                    st.warning("Por favor, complete todos los campos.")
+            # Mostrar hitos del sprint seleccionado si grupo_id_sprint está asignado
+            if grupo_id_sprint:
+                mostrar_hitos_app(grupo_id, grupo_id_sprint, selected_sprint)
+            else:
+                st.error("Error al obtener el ID del sprint seleccionado.")
+        else:
+            st.warning("Por favor, seleccione un sprint válido.")
+    else:
+        st.warning("Por favor, seleccione un grupo válido.")
         mostrar_hitos_app(grupo_id, grupo_id_sprint,selected_sprint)
 
 
